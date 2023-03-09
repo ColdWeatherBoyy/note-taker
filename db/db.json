@@ -5,8 +5,13 @@
     "id": "ID"
   },
   {
+    "title": "Change error",
+    "text": "Make sure its not a 418 error when you submit",
+    "id": "0bf6"
+  },
+  {
     "title": "Add delete functionality",
     "text": "Rememer to add delete functionality",
-    "id": "0bf6"
+    "id": "0b12f6"
   }
 ]
