@@ -10,9 +10,9 @@ No steps required, just visit site and use!
 
 ## Usage
 
-Navigate to site [here](https://coldweatherboyy.github.io/note-taker/). Click start and you'll be able to see your notes and add new ones. The delete functionality is still to come.
+Navigate to site [here](https://notetaker-edx-112358.herokuapp.com/notes). Click get started, and you'll be able to see your notes and add new ones. The delete functionality is still to come.
 
-SCREENSHOT TO COME
+![screenshot of site](./screenshot.png)
 
 ## Credits
 
