@@ -30,7 +30,6 @@ notesAPI.post('/api/notes', (req, res) =>{
 
     // adds new note to existing data base array
     dbData.push(newNote);
-    console.log(dbData);
     // stringifies the dbData to rewrite file
     const updatedNotes = JSON.stringify(dbData , null, 2);
 
@@ -53,5 +52,25 @@ notesAPI.post('/api/notes', (req, res) =>{
     res.status(418).json('Teapots need to have a title or text to be submitted')
   }
 });
+
+// delete request from click on delete of list items
+notesAPI.delete('/api/notes/:id', (req, res) => {
+  // defining id as the request parameters id which is grabbed in the handleNoteDelete function
+  const id = req.params.id
+
+  // finds index of object to remove
+  const noteIndex = dbData.findIndex(specificNote => specificNote.id === id);
+  
+  // removing that specified index
+  dbData.splice(noteIndex, 1);
+
+  // write file with updated, stringified dbData
+  fs.writeFile('./db/db.json', JSON.stringify(dbData, null, 2), (err) =>
+      // should probably throw an error here if it fails
+    err ? console.error(err) : console.info(`Note with id ${id} deleted.`)
+  )
+  
+  return res.status(204).json('Successfully deleted note')
+})
 
 module.exports = notesAPI;
