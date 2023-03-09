@@ -4,7 +4,7 @@ const fs = require('fs');
 const dbData = require('../db/db.json')
 
 // get request for notesAPI that returns concents of db.json as JSON
-notesAPI.get('api/notes', (req, res) => {
+notesAPI.get('/api/notes', (req, res) => {
   console.info(`${req.method} request received for notes/api`);
   
   // returns db.JSON as JSON
@@ -12,7 +12,7 @@ notesAPI.get('api/notes', (req, res) => {
 });
 
 // post request for notes API
-notesAPI.post('api.notes', (req, res) =>{
+notesAPI.post('/api/notes', (req, res) =>{
   console.info(`${req.method} request received for notes/api`);
 
   // destructure request body

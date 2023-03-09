@@ -7,8 +7,8 @@ const notesAPI = require('./notesapi')
 
 
 // TODO: Use our routes
-Router.use(htmlGets);
 Router.use(notesAPI);
+Router.use(htmlGets);
 
 
 // TODO: Export app
