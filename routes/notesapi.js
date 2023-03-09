@@ -2,6 +2,7 @@
 const notesAPI = require('express').Router();
 const fs = require('fs');
 const dbData = require('../db/db.json')
+const uuid = require('../helpers/uuid')
 
 // get request for notesAPI that returns concents of db.json as JSON
 notesAPI.get('/api/notes', (req, res) => {
@@ -23,7 +24,8 @@ notesAPI.post('/api/notes', (req, res) =>{
 
     const newNote = {
       title,
-      text
+      text,
+      id: uuid(),
     }
 
     // adds new note to existing data base array
