@@ -50,3 +50,5 @@ notesAPI.post('api.notes', (req, res) =>{
     res.status(418).json('Teapots need to have a title or text to be submitted')
   }
 });
+
+module.exports = notesAPI;
