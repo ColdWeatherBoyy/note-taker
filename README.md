@@ -6,7 +6,7 @@ This is an app built from existing front-end code in which I practiced creting s
 
 ## Installation
 
-No steps required, just visit site and use!
+No steps required, just visit site and use! Hooray.
 
 ## Usage
 
