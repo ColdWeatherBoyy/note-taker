@@ -30,11 +30,12 @@ notesAPI.post('/api/notes', (req, res) =>{
 
     // adds new note to existing data base array
     dbData.push(newNote);
+    console.log(dbData);
     // stringifies the dbData to rewrite file
     const updatedNotes = JSON.stringify(dbData , null, 2);
 
     // overwrites file with new notes including submitted one
-    fs.writeFile('../db/db.json', updatedNotes , (err) =>
+    fs.writeFile('./db/db.json', updatedNotes , (err) =>
       // should probably throw an error here if it fails
       err ? console.error(err) : console.info(`Review for ${newNote.title} has been added`)
     )
