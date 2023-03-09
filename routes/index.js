@@ -6,10 +6,10 @@ const htmlGets = require('./htmlgets');
 const notesAPI = require('./notesapi')
 
 
-// TODO: Use our routes
+// Use our routes
 Router.use(notesAPI);
 Router.use(htmlGets);
 
 
-// TODO: Export app
+// Export app
 module.exports = Router;
